@@ -2,11 +2,8 @@ import javax.swing.JOptionPane;
 
 public class Lista1 {
 
-    // ================================================================
-    // EXERCICIO 1 - Compara dois numeros inteiros
-    // 3 funcoes: exe1() [controla o fluxo], le() [le um numero],
-    // exibe() [mostra o resultado da comparacao]
-    // ================================================================
+    
+    // EXERCICIO 1 
     public static void exe1() {
         int x, y;
         x = le(1);
@@ -41,11 +38,8 @@ public class Lista1 {
         }
     }
 
-    // ================================================================
-    // EXERCICIO 2 - Raizes da equacao do 2 grau (ax^2 + bx + c = 0)
-    // 4 funcoes: exe2() [controla o fluxo], leCoeficiente() [le a, b ou c],
-    // calcularDelta() [calcula o discriminante], exibeRaizes() [mostra o resultado]
-    // ================================================================
+    
+    // EXERCICIO 2 
     public static void exe2() {
         double a = leCoeficiente("a");
         double b = leCoeficiente("b");
@@ -81,10 +75,9 @@ public class Lista1 {
         }
     }
 
-    // ================================================================
-    // FUNCOES AUXILIARES COMPARTILHADAS
-    // Reaproveitadas por varios exercicios (mesmo espirito do le() do exe1)
-    // ================================================================
+    
+    
+   
     static int leInteiro(String mensagem) {
         return Integer.parseInt(JOptionPane.showInputDialog(mensagem));
     }
@@ -97,10 +90,8 @@ public class Lista1 {
         JOptionPane.showMessageDialog(null, mensagem);
     }
 
-    // ================================================================
-    // EXERCICIO 3 - Media aritmetica entre dois numeros inteiros
-    // 3 funcoes: exe3(), leInteiro() [compartilhada], calcularMedia()
-    // ================================================================
+    
+    // EXERCICIO 3 
     public static void exe3() {
         int a = leInteiro("Digite o primeiro numero inteiro:");
         int b = leInteiro("Digite o segundo numero inteiro:");
@@ -114,10 +105,8 @@ public class Lista1 {
         return (a + b) / 2.0;
     }
 
-    // ================================================================
-    // EXERCICIO 4 - Tipo de triangulo a partir de 3 lados
-    // 3 funcoes proprias: exe4(), formaTriangulo(), classificarTriangulo()
-    // ================================================================
+    
+    // EXERCICIO 4 
     public static void exe4() {
         double a = leDecimal("Digite o 1 lado do triangulo:");
         double b = leDecimal("Digite o 2 lado do triangulo:");
@@ -143,10 +132,8 @@ public class Lista1 {
             return "ESCALENO";
     }
 
-    // ================================================================
-    // EXERCICIO 5 - Somas positivas e negativas (finaliza com 0)
-    // 3 funcoes proprias: exe5(), contarSoma(), exibirResultadoSomas()
-    // ================================================================
+    
+    // EXERCICIO 5 
     public static void exe5() {
         int numero, soma = 0;
         int positivas = 0, negativas = 0;
@@ -174,11 +161,8 @@ public class Lista1 {
         mostrar("Somas positivas = " + positivas + "\nSomas negativas = " + negativas);
     }
 
-    // ================================================================
-    // EXERCICIO 6 - Fatores de um numero natural (com opcao de repetir)
-    // 2 funcoes proprias: exe6() [controla o fluxo, inclusive a repeticao],
-    // exibirFatores() -- mais leInteiro()/mostrar() compartilhadas
-    // ================================================================
+    
+    // EXERCICIO 6 
     public static void exe6() {
         String repetir;
         do {
@@ -198,10 +182,8 @@ public class Lista1 {
         mostrar("Fatores de " + n + ": " + fatores.toString());
     }
 
-    // ================================================================
-    // EXERCICIO 7 - Pares, impares, positivos e negativos (finaliza com 0)
-    // 3 funcoes proprias: exe7(), atualizarContadores(), exibirResultado7()
-    // ================================================================
+    
+    // EXERCICIO 7 
     static int qtdPares, qtdImpares, qtdPositivos, qtdNegativos;
     static int somaPares, somaImpares, somaPositivos, somaNegativos;
 
@@ -247,10 +229,8 @@ public class Lista1 {
         );
     }
 
-    // ================================================================
-    // EXERCICIO 8 - Verifica se um numero e primo
-    // 3 funcoes proprias: exe8(), verificaPrimo(), formatarMensagemPrimo()
-    // ================================================================
+    
+    // EXERCICIO 8 
     public static void exe8() {
         int n = leInteiro("Digite um numero natural:");
         boolean primo = verificaPrimo(n);
@@ -269,10 +249,8 @@ public class Lista1 {
         return primo ? (n + " e PRIMO.") : (n + " NAO e primo.");
     }
 
-    // ================================================================
-    // EXERCICIO 9 - Fatorial de um numero natural
-    // 3 funcoes proprias: exe9(), calcularFatorial(), formatarMensagemFatorial()
-    // ================================================================
+    
+    // EXERCICIO 9 
     public static void exe9() {
         int n = leInteiro("Digite um numero natural:");
         long fatorial = calcularFatorial(n);
@@ -291,10 +269,8 @@ public class Lista1 {
         return n + "! = " + fatorial;
     }
 
-    // ================================================================
-    // EXERCICIO 10 - MMC de dois numeros naturais
-    // 3 funcoes proprias: exe10(), calcularMDC(), calcularMMC()
-    // ================================================================
+    
+    // EXERCICIO 10 
     public static void exe10() {
         int a = leInteiro("Digite o 1 numero natural:");
         int b = leInteiro("Digite o 2 numero natural:");
@@ -317,10 +293,8 @@ public class Lista1 {
         return (a * b) / calcularMDC(a, b);
     }
 
-    // ================================================================
-    // EXERCICIO 11 - MDC de dois numeros naturais
-    // 3 funcoes: exe11(), calcularMDC() [reaproveitada do exe10], formatarMensagemMDC()
-    // ================================================================
+    
+    // EXERCICIO 11 
     public static void exe11() {
         int a = leInteiro("Digite o 1 numero natural:");
         int b = leInteiro("Digite o 2 numero natural:");
@@ -334,10 +308,8 @@ public class Lista1 {
         return "O MDC entre " + a + " e " + b + " e: " + mdc;
     }
 
-    // ================================================================
-    // EXERCICIO 12 - Sequencia de Fibonacci
-    // 3 funcoes proprias: exe12(), gerarFibonacci(), formatarSequencia()
-    // ================================================================
+    
+    // EXERCICIO 12
     public static void exe12() {
         int n = leInteiro("Quantos termos da sequencia de Fibonacci deseja gerar?");
 
@@ -364,10 +336,8 @@ public class Lista1 {
         return sb.toString();
     }
 
-    // ================================================================
-    // EXERCICIO 13 - Progressao Aritmetica (PA)
-    // 3 funcoes: exe13(), gerarPA(), formatarSequencia() [reaproveitada do exe12]
-    // ================================================================
+    
+    // EXERCICIO 13 - 
     public static void exe13() {
         int primeiroTermo = leInteiro("Digite o primeiro termo da PA:");
         int razao = leInteiro("Digite a razao da PA:");
@@ -386,10 +356,8 @@ public class Lista1 {
         return pa;
     }
 
-    // ================================================================
-    // EXERCICIO 14 - Soma dos elementos da Progressao Geometrica (PG)
-    // 3 funcoes proprias: exe14(), calcularSomaPG(), formatarMensagemPG()
-    // ================================================================
+    
+    // EXERCICIO 14 -
     public static void exe14() {
         double primeiroTermo = leDecimal("Digite o primeiro termo da PG:");
         double razao = leDecimal("Digite a razao da PG:");
@@ -414,10 +382,8 @@ public class Lista1 {
         return "A soma dos elementos da PG e: " + soma;
     }
 
-    // ================================================================
-    // EXERCICIO 15 - Tabuada de multiplicacao de 1 a 10
-    // 3 funcoes proprias: exe15(), gerarTabuada(), formatarLinhaTabuada()
-    // ================================================================
+    
+    // EXERCICIO 15 
     public static void exe15() {
         StringBuilder tabuadaCompleta = new StringBuilder();
         for (int numero = 1; numero <= 10; numero++) {
@@ -438,10 +404,8 @@ public class Lista1 {
         return numero + "x" + multiplicador + "=" + (numero * multiplicador);
     }
 
-    // ================================================================
-    // EXERCICIO 16 - Verifica se um numero e perfeito
-    // 3 funcoes proprias: exe16(), somarDivisores(), verificarPerfeito()
-    // ================================================================
+    
+    // EXERCICIO 16 - 
     public static void exe16() {
         int n = leInteiro("Digite um numero natural:");
         boolean perfeito = verificarPerfeito(n);
